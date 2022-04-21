@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo gallery</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .container {
+        display: flex;
+        width: 90vw;
+      }
+
+      .panel {
+        background-repeat: no-repeat;
+        height: 90vh;
+        flex: 0.5;
+        background-size: cover;
+        position: relative;
+        border-radius: 15px;
+        margin: 10px;
+        transition: flex 0.7s ease-in;
+      }
+      .panel1 {
+        background-image: url(photo1.jpg);
+      }
+      .panel2 {
+        background-image: url(photo2.jpg);
+      }
+      .panel3 {
+        background-image: url(photo3.jpg);
+      }
+      .panel4 {
+        background-image: url(photo4.jpg);
+      }
+
+      .panel.active {
+        flex: 5;
+      }
+      .panel h3 {
+        font-size: 3rem;
+        color: #fff;
+        bottom: 40px;
+        left: 30px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in 0.4s;
+      }
+      .panel.active h3 {
+        opacity: 1;
+      }
+
+      @media screen and (max-width: 800px) {
+        .panel:nth-child(3),
+        .panel:nth-child(4) {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel active panel1">
+        <h3>Life</h3>
+      </div>
+      <div class="panel panel2">
+        <h3>Life</h3>
+      </div>
+      <div class="panel panel3">
+        <h3>Life</h3>
+      </div>
+      <div class="panel panel4">
+        <h3>Life..</h3>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

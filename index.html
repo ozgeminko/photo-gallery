@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <title>Photo gallery</title>
     <style>
       * {
@@ -34,16 +40,16 @@
         transition: flex 0.7s ease-in;
       }
       .panel1 {
-        background-image: url(photo1.jpg);
+        background-image: url(images/photo1.jpg);
       }
       .panel2 {
-        background-image: url(photo2.jpg);
+        background-image: url(images/photo2.jpg);
       }
       .panel3 {
-        background-image: url(photo3.jpg);
+        background-image: url(images/photo3.jpg);
       }
       .panel4 {
-        background-image: url(photo4.jpg);
+        background-image: url(images/photo4.jpg);
       }
 
       .panel.active {
@@ -60,6 +66,17 @@
       .panel.active h3 {
         opacity: 1;
       }
+      button {
+        margin-bottom: 0;
+      }
+      .btn {
+        width: 20px;
+        height: 20px;
+        margin-top: 300px;
+      }
+      .fa {
+        cursor: pointer;
+      }
 
       @media screen and (max-width: 800px) {
         .panel:nth-child(3),
@@ -71,18 +88,20 @@
   </head>
   <body>
     <div class="container">
-      <div class="panel active panel1">
+      <button id="btn1" class="btn"><i class="fa fa-cloud"></i></button>
+      <div id="0" class="panel active panel1">
         <h3>Life</h3>
       </div>
-      <div class="panel panel2">
+      <div id="1" class="panel panel2">
         <h3>Life</h3>
       </div>
-      <div class="panel panel3">
+      <div id="2" class="panel panel3">
         <h3>Life</h3>
       </div>
-      <div class="panel panel4">
+      <div id="3" class="panel panel4">
         <h3>Life..</h3>
       </div>
+      <button id="btn2" class="btn"><i class="fa fa-cloud"></i></button>
     </div>
 
     <script src="script.js"></script>
